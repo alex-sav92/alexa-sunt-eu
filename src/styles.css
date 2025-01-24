@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(270deg, rgba(119, 201, 212, 1) 50%, rgba(59, 145, 108, 1) 100%);  
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+a {
+    color: white;
+    text-decoration: underline;
+    margin: 2px 2px;
+    padding: 10px;
+    font-weight: bold;
+}

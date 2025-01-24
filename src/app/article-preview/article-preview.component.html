@@ -1,0 +1,10 @@
+
+    <h2>{{this.article?.title?.substring(0, 10) + "..."}}</h2>
+    <p>{{this.article?.date}}</p>
+    <p>{{this.article?.content?.substring(0, 50) + "..."}}<a href="/cod/{ceva}" class="button-read-more">Mai mult</a></p>
+    <div>Tag-uri: 
+        @for (tag of this.article?.tags; track tag) {
+            <span class="tag">{{tag}}</span>
+        }
+    </div>
+    
