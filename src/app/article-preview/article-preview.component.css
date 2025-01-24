@@ -15,3 +15,7 @@ span.tag {
     text-decoration: underline;
     font-style: italic;
 }
+
+a.title-link {
+    font-size: 1.8rem;
+}

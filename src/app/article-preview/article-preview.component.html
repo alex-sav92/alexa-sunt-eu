@@ -1,10 +1,6 @@
 
-    <h2>{{this.article?.title?.substring(0, 10) + "..."}}</h2>
+    <a class="title-link" routerLink="/cod/{{this.article?.id}}">{{this.article?.title}}</a>
     <p>{{this.article?.date}}</p>
-    <p>{{this.article?.content?.substring(0, 50) + "..."}}<a routerLink="/cod/{{this.article?.id}}" class="button-read-more">Mai mult</a></p>
-    <div>Tag-uri: 
-        @for (tag of this.article?.tags; track tag) {
-            <span class="tag">{{tag}}</span>
-        }
-    </div>
+    <p>{{this.article?.content?.substring(0, 100) + "..."}}<a routerLink="/cod/{{this.article?.id}}" class="button-read-more">Mai mult</a></p>
+   
     

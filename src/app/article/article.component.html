@@ -1,9 +1,12 @@
 <div>
-    <h1>Article worls</h1>
-    
+
     <h2>{{this.article?.title}}</h2>
     <p>{{this.article?.date}}</p>
-    <p>{{this.article?.content}}</p>
-    <p>{{this.article?.tags}}</p>
+    <div [innerHtml]="this.article?.content"></div>
+</div>
+<div>categorii: 
+    @for (tag of this.article?.tags; track tag) {
+        <span class="tag">{{tag}}</span>
+    }
 </div>
 

@@ -1,0 +1,8 @@
+span.tag {
+    margin-right: 0.4rem;
+    padding: 2px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: white;
+    color: #2a0953;
+}

@@ -3,6 +3,7 @@ import { Article } from '../article';
 import { NgIf, CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ArticlesService } from '../services/articles.service';
 
 @Component({
   selector: 'app-article',
@@ -13,11 +14,12 @@ import { Observable } from 'rxjs';
 export class ArticleComponent {
   article: Article | undefined;
   constructor(
+    private articlesService: ArticlesService,
     private route: ActivatedRoute,
     private router: Router) {}
   ngOnInit() {
     const myId = this.route.snapshot.paramMap.get('id');
-    this.article = new Article(5, "asd", "asd", "asd", []); //this.service.getHero(myId);
+    this.article = this.articlesService.getArticleById(parseInt(myId!));
     console.log("MY ID:", myId);
   }
 }

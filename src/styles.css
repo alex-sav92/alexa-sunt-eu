@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background: rgb(76,73,152);
-    background: linear-gradient(90deg, rgba(76,73,152,1) 22%, rgba(7,139,185,1) 82%);
+    background: rgb(42,9,83);
+background: linear-gradient(90deg, rgba(42,9,83,1) 26%, rgba(0,74,91,1) 100%);
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
