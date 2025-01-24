@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Article } from '../article';
 import { NgIf, CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-article',
@@ -9,7 +11,13 @@ import { NgIf, CommonModule } from '@angular/common';
   styleUrl: './article.component.css'
 })
 export class ArticleComponent {
-  @Input() article: Article | undefined;
-  @Input() previewMode: boolean = false;
-  fullMode: boolean = !this.previewMode;
+  article: Article | undefined;
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) {}
+  ngOnInit() {
+    const myId = this.route.snapshot.paramMap.get('id');
+    this.article = new Article(5, "asd", "asd", "asd", []); //this.service.getHero(myId);
+    console.log("MY ID:", myId);
+  }
 }

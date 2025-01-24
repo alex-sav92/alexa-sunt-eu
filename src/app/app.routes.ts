@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { CodeblogComponent } from './codeblog/codeblog.component';
 import { ArticleComponent } from './article/article.component';
-import { AppComponent } from './app.component';
 
 export const myroutes: Routes = [
   {
@@ -9,9 +8,9 @@ export const myroutes: Routes = [
     component: CodeblogComponent,
     title: 'Code Blog',
   },
-  // {
-  //   path: 'blog/:id',
-  //   component: ArticleComponent,
-  //   title: 'Article',
-  // }
+  {
+    path: 'cod/:id',
+    component: ArticleComponent,
+    title: 'Article',
+  }
   ];
